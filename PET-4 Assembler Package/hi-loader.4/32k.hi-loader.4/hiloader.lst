@@ -1,0 +1,292 @@
+
+; 64tass Turbo Assembler Macro V1.53.1515 listing file
+; 64tass -L hiloader.lst -o hiloader.prg hiloader.asm
+; Thu Apr 05 16:52:50 2018
+
+;Offset	;Hex		;Monitor	;Source
+
+;******  Processing input file: hiloader.asm
+
+=$ffc6					CHKIN=$FFC6
+=$ffcc					CLRCHN=$FFCC
+=$ffcf					CHRIN=$FFCF
+.7000	4c 1e 70	jmp $701e	       JMP XX701E
+>7003	aa				XX7003 .BYTE $AA
+>7004	aa				XX7004 .BYTE $AA
+>7005	aa				XX7005 .BYTE $AA
+>7006	aa				XX7006 .BYTE $AA
+>7007	aa				XX7007 .BYTE $AA
+>7008	aa				XX7008 .BYTE $AA
+>7009	aa				XX7009 .BYTE $AA
+>700a	aa				XX700A .BYTE $AA
+>700b	aa				XX700B .BYTE $AA
+>700c	aa				XX700C .BYTE $AA
+>700d	aa				XX700D .BYTE $AA
+>700e	aa				       .BYTE $AA
+>700f	aa				       .BYTE $AA
+>7010	aa				       .BYTE $AA
+>7011	aa				       .BYTE $AA
+>7012	aa				       .BYTE $AA
+>7013	aa				       .BYTE $AA
+>7014	aa				       .BYTE $AA
+>7015	aa				       .BYTE $AA
+>7016	aa				       .BYTE $AA
+>7017	aa				       .BYTE $AA
+>7018	aa				       .BYTE $AA
+>7019	aa				       .BYTE $AA
+>701a	aa				       .BYTE $AA
+>701b	aa				       .BYTE $AA
+>701c	aa				       .BYTE $AA
+>701d	aa				XX701D .BYTE $AA
+.701e	a9 00		lda #$00	XX701E LDA #$00
+.7020	8d 0c 70	sta $700c	       STA XX700C
+.7023	8d 1d 70	sta $701d	       STA XX701D
+.7026	8d 08 70	sta $7008	       STA XX7008
+.7029	8d 09 70	sta $7009	       STA XX7009
+.702c	8d 05 70	sta $7005	       STA XX7005
+.702f	8d 06 70	sta $7006	       STA XX7006
+.7032	a2 40		ldx #$40	       LDX #$40      ;'@'
+.7034	20 98 71	jsr $7198	       JSR XX7198
+.7037	20 cf ff	jsr $ffcf	XX7037 JSR CHRIN
+.703a	c9 20		cmp #$20	       CMP #$20      ;' '
+.703c	f0 f9		beq $7037	       BEQ XX7037
+.703e	c9 0d		cmp #$0d	       CMP #$0D
+.7040	f0 10		beq $7052	       BEQ XX7052
+.7042	20 6b d7	jsr $d76b	       JSR $D76B
+.7045	90 d7		bcc $701e	       BCC XX701E
+.7047	8d 06 70	sta $7006	       STA XX7006
+.704a	20 63 d7	jsr $d763	       JSR $D763
+.704d	90 cf		bcc $701e	       BCC XX701E
+.704f	8d 05 70	sta $7005	       STA XX7005
+.7052	a2 8e		ldx #$8e	XX7052 LDX #AA062D-XX71AE ;#$8E
+.7054	20 98 71	jsr $7198	       JSR XX7198
+.7057	a2 28		ldx #$28	       LDX #$28      ;'('
+.7059	8e 0a 70	stx $700a	       STX XX700A
+.705c	ce 0a 70	dec $700a	XX705C DEC XX700A
+.705f	f0 bd		beq $701e	       BEQ XX701E
+.7061	20 cf ff	jsr $ffcf	       JSR CHRIN
+.7064	c9 20		cmp #$20	       CMP #$20      ;' '
+.7066	f0 f4		beq $705c	       BEQ XX705C
+.7068	c9 0d		cmp #$0d	       CMP #$0D
+.706a	d0 03		bne $706f	       BNE XX706F
+.706c	4c 88 71	jmp $7188	       JMP XX7188
+.706f	a2 00		ldx #$00	XX706F LDX #$00
+.7071	8e 1d 70	stx $701d	       STX XX701D
+.7074	f0 07		beq $707d	       BEQ XX707D
+.7076	20 cf ff	jsr $ffcf	XX7076 JSR CHRIN
+.7079	c9 20		cmp #$20	       CMP #$20      ;' '
+.707b	f0 15		beq $7092	       BEQ XX7092
+.707d	c9 0d		cmp #$0d	XX707D CMP #$0D
+.707f	f0 11		beq $7092	       BEQ XX7092
+.7081	ae 1d 70	ldx $701d	       LDX XX701D
+.7084	e0 0e		cpx #$0e	       CPX #$0E
+.7086	f0 96		beq $701e	       BEQ XX701E
+.7088	9d 0d 70	sta $700d,x	       STA XX700D,X
+.708b	e8		inx		       INX
+.708c	8e 1d 70	stx $701d	       STX XX701D
+.708f	4c 76 70	jmp $7076	       JMP XX7076
+.7092	a9 2c		lda #$2c	XX7092 LDA #$2C      ;','
+.7094	9d 0d 70	sta $700d,x	       STA XX700D,X
+.7097	e8		inx		       INX
+.7098	a9 53		lda #$53	       LDA #$53      ;'S'
+.709a	9d 0d 70	sta $700d,x	       STA XX700D,X
+.709d	e8		inx		       INX
+.709e	8e 1d 70	stx $701d	       STX XX701D
+.70a1	a9 0d		lda #$0d	       LDA #$0D
+.70a3	20 02 e2	jsr $e202	       JSR $E202
+.70a6	a9 07		lda #$07	       LDA #$07
+.70a8	85 d2		sta $d2		       STA $D2
+.70aa	a9 02		lda #$02	       LDA #$02
+.70ac	85 d1		sta $d1		       STA $D1
+.70ae	a9 08		lda #$08	       LDA #$08
+.70b0	85 d4		sta $d4		       STA $D4
+.70b2	a9 0f		lda #$0f	       LDA #$0F
+.70b4	85 d3		sta $d3		       STA $D3
+.70b6	a9 49		lda #$49	       LDA #$49      ;'I'
+.70b8	8d 03 70	sta $7003	       STA XX7003
+.70bb	a9 30		lda #$30	       LDA #$30      ;'0'
+.70bd	8d 04 70	sta $7004	       STA XX7004
+.70c0	a9 70		lda #$70	       LDA #$70
+.70c2	85 db		sta $db		       STA $DB
+.70c4	a9 03		lda #$03	       LDA #$03
+.70c6	85 da		sta $da		       STA $DA
+.70c8	20 63 f5	jsr $f563	       JSR $F563
+.70cb	a9 07		lda #$07	       LDA #$07
+.70cd	20 e2 f2	jsr $f2e2	       JSR $F2E2
+.70d0	a9 31		lda #$31	       LDA #$31      ;'1'
+.70d2	8d 04 70	sta $7004	       STA XX7004
+.70d5	20 63 f5	jsr $f563	       JSR $F563
+.70d8	a9 07		lda #$07	       LDA #$07
+.70da	20 e2 f2	jsr $f2e2	       JSR $F2E2
+.70dd	a9 07		lda #$07	       LDA #$07
+.70df	85 d3		sta $d3		       STA $D3
+.70e1	a9 70		lda #$70	       LDA #$70
+.70e3	85 db		sta $db		       STA $DB
+.70e5	a9 0d		lda #$0d	       LDA #$0D
+.70e7	85 da		sta $da		       STA $DA
+.70e9	ad 1d 70	lda $701d	       LDA XX701D
+.70ec	85 d1		sta $d1		       STA $D1
+.70ee	20 63 f5	jsr $f563	       JSR $F563
+.70f1	20 35 f3	jsr $f335	XX70F1 JSR $F335
+.70f4	d0 03		bne $70f9	       BNE XX70F9
+.70f6	4c 80 71	jmp $7180	       JMP XX7180
+.70f9	20 71 72	jsr $7271	XX70F9 JSR XX7271
+.70fc	c9 3b		cmp #$3b	       CMP #$3B      ;';'
+.70fe	d0 f1		bne $70f1	       BNE XX70F1
+.7100	a9 00		lda #$00	       LDA #$00
+.7102	8d 03 70	sta $7003	       STA XX7003
+.7105	8d 04 70	sta $7004	       STA XX7004
+.7108	8d 0a 70	sta $700a	       STA XX700A
+.710b	20 4f 72	jsr $724f	       JSR XX724F
+.710e	d0 12		bne $7122	       BNE XX7122
+.7110	20 4f 72	jsr $724f	       JSR XX724F
+.7113	cd 09 70	cmp $7009	       CMP XX7009
+.7116	d0 6b		bne $7183	       BNE XX7183
+.7118	20 4f 72	jsr $724f	       JSR XX724F
+.711b	cd 08 70	cmp $7008	       CMP XX7008
+.711e	d0 63		bne $7183	       BNE XX7183
+.7120	f0 66		beq $7188	       BEQ XX7188
+.7122	8d 07 70	sta $7007	XX7122 STA XX7007
+.7125	ee 08 70	inc $7008	       INC XX7008
+.7128	d0 03		bne $712d	       BNE XX712D
+.712a	ee 09 70	inc $7009	       INC XX7009
+.712d	20 8c 72	jsr $728c	XX712D JSR XX728C
+.7130	20 4f 72	jsr $724f	       JSR XX724F
+.7133	48		pha		       PHA
+.7134	18		clc		       CLC
+.7135	6d 06 70	adc $7006	       ADC XX7006
+.7138	85 43		sta $43		       STA $43
+.713a	68		pla		       PLA
+.713b	20 8c 72	jsr $728c	       JSR XX728C
+.713e	20 4f 72	jsr $724f	       JSR XX724F
+.7141	48		pha		       PHA
+.7142	18		clc		       CLC
+.7143	6d 05 70	adc $7005	       ADC XX7005
+.7146	85 42		sta $42		       STA $42
+.7148	90 02		bcc $714c	       BCC XX714C
+.714a	e6 43		inc $43		       INC $43
+.714c	68		pla		XX714C PLA
+.714d	20 8c 72	jsr $728c	       JSR XX728C
+.7150	20 4f 72	jsr $724f	XX7150 JSR XX724F
+.7153	ac 0a 70	ldy $700a	       LDY XX700A
+.7156	ee 0a 70	inc $700a	       INC XX700A
+.7159	91 42		sta ($42),y	       STA ($42),Y
+.715b	d1 42		cmp ($42),y	       CMP ($42),Y
+.715d	d0 1b		bne $717a	       BNE XX717A
+.715f	20 8c 72	jsr $728c	       JSR XX728C
+.7162	ce 07 70	dec $7007	       DEC XX7007
+.7165	d0 e9		bne $7150	       BNE XX7150
+.7167	20 4f 72	jsr $724f	       JSR XX724F
+.716a	cd 04 70	cmp $7004	       CMP XX7004
+.716d	d0 0e		bne $717d	       BNE XX717D
+.716f	20 4f 72	jsr $724f	       JSR XX724F
+.7172	cd 03 70	cmp $7003	       CMP XX7003
+.7175	d0 06		bne $717d	       BNE XX717D
+.7177	4c f1 70	jmp $70f1	       JMP XX70F1
+.717a	a2 24		ldx #$24	XX717A LDX #AA05C3-XX71AE ;#$24      ;'$'
+>717c	2c				       .BYTE $2C ;BIT ZP SKIP
+.717d	a2 31		ldx #$31	XX717D LDX #AA05D0-XX71AE ;#$31      ;'1'
+>717f	2c				       .BYTE $2C ;BIT ZP SKIP
+.7180	a2 11		ldx #$11	XX7180 LDX #AA05B0-XX71AE ;#$11
+>7182	2c				       .BYTE $2C ;BIT ZP SKIP
+.7183	a2 00		ldx #$00	XX7183 LDX #$00
+.7185	20 98 71	jsr $7198	       JSR XX7198
+.7188	a9 07		lda #$07	XX7188 LDA #$07
+.718a	20 e2 f2	jsr $f2e2	       JSR $F2E2
+.718d	20 cc ff	jsr $ffcc	       JSR CLRCHN
+.7190	a2 18		ldx #$18	       LDX #AA05B7-XX71AE ;#$18
+.7192	20 98 71	jsr $7198	       JSR XX7198
+.7195	4c ff b3	jmp $b3ff	       JMP $B3FF
+.7198	8e 0a 70	stx $700a	XX7198 STX XX700A
+.719b	ae 0a 70	ldx $700a	XX719B LDX XX700A
+.719e	bd ae 71	lda $71ae,x	       LDA XX71AE,X
+.71a1	08		php		       PHP
+.71a2	29 7f		and #$7f	       AND #$7F
+.71a4	20 02 e2	jsr $e202	       JSR $E202
+.71a7	ee 0a 70	inc $700a	       INC XX700A
+.71aa	28		plp		       PLP
+.71ab	10 ee		bpl $719b	       BPL XX719B
+.71ad	60		rts		       RTS
+>71ae	0d				XX71AE .BYTE $0D
+>71af	42 41 44 20 52 45 43 4f		       .TEXT 'BAD RECORD COUN'
+>71b7	52 44 20 43 4f 55 4e
+>71be	d4				       .BYTE $D4
+>71bf	0d				AA05B0 .BYTE $0D
+>71c0	42 52 45 41 4b			       .TEXT 'BREAK'
+>71c5	8d				       .BYTE $8D
+>71c6	0d				AA05B7 .BYTE $0D
+>71c7	45 4e 44 20 4f 46 20 4c		       .TEXT 'END OF LOA'
+>71cf	4f 41
+>71d1	c4				       .BYTE $C4
+>71d2	0d				AA05C3 .BYTE $0D
+>71d3	4e 4f 4e 2d 52 41 4d 20		       .TEXT 'NON-RAM LOA'
+>71db	4c 4f 41
+>71de	c4				       .BYTE $C4
+>71df	0d				AA05D0 .BYTE $0D
+>71e0	43 48 45 43 4b 53 55 4d		       .TEXT 'CHECKSUM ERRO'
+>71e8	20 45 52 52 4f
+>71ed	d2				       .BYTE $D2
+>71ee	0d				AA05DF .BYTE $0D
+>71ef	0d				       .BYTE $0D
+>71f0	0d				       .BYTE $0D
+>71f1	33 32 4b 20 4c 4f 41 44		       .TEXT '32K LOADER V121379'
+>71f9	45 52 20 56 31 32 31 33 37 39
+>7203	0d				       .BYTE $0D
+>7204	28 43 29 20 31 39 37 39		       .TEXT '(C) 1979 BY COMMODORE BUSINESS MACHINES'
+>720c	20 42 59 20 43 4f 4d 4d 4f 44 4f 52 45 20 42 55
+>721c	53 49 4e 45 53 53 20 4d 41 43 48 49 4e 45 53
+>722b	0d				       .BYTE $0D
+>722c	0d				       .BYTE $0D
+>722d	0d				       .BYTE $0D
+>722e	49 4e 50 55 54 20 4f 46		       .TEXT 'INPUT OFFSET?'
+>7236	46 53 45 54 3f
+>723b	a0				       .BYTE $A0
+>723c	0d				AA062D .BYTE $0D
+>723d	4f 42 4a 45 43 54 20 46		       .TEXT 'OBJECT FILE NAME?'
+>7245	49 4c 45 20 4e 41 4d 45 3f
+>724e	a0				       .BYTE $A0
+.724f	20 71 72	jsr $7271	XX724F JSR XX7271
+.7252	20 66 72	jsr $7266	       JSR XX7266
+.7255	0a		asl a		       ASL A
+.7256	0a		asl a		       ASL A
+.7257	0a		asl a		       ASL A
+.7258	0a		asl a		       ASL A
+.7259	8d 0b 70	sta $700b	       STA XX700B
+.725c	20 71 72	jsr $7271	       JSR XX7271
+.725f	20 66 72	jsr $7266	       JSR XX7266
+.7262	0d 0b 70	ora $700b	       ORA XX700B
+.7265	60		rts		       RTS
+.7266	c9 3a		cmp #$3a	XX7266 CMP #$3A      ;':'
+.7268	08		php		       PHP
+.7269	29 0f		and #$0f	       AND #$0F
+.726b	28		plp		       PLP
+.726c	90 02		bcc $7270	       BCC XX7270
+.726e	69 08		adc #$08	       ADC #$08
+.7270	60		rts		XX7270 RTS
+.7271	ad 0c 70	lda $700c	XX7271 LDA XX700C
+.7274	c9 07		cmp #$07	       CMP #$07
+.7276	f0 0b		beq $7283	       BEQ XX7283
+.7278	20 cc ff	jsr $ffcc	       JSR CLRCHN
+.727b	a2 07		ldx #$07	       LDX #$07
+.727d	8e 0c 70	stx $700c	       STX XX700C
+.7280	20 c6 ff	jsr $ffc6	       JSR CHKIN
+.7283	20 cf ff	jsr $ffcf	XX7283 JSR CHRIN
+.7286	48		pha		       PHA
+.7287	20 02 e2	jsr $e202	       JSR $E202
+.728a	68		pla		       PLA
+.728b	60		rts		       RTS
+.728c	18		clc		XX728C CLC
+.728d	6d 03 70	adc $7003	       ADC XX7003
+.7290	8d 03 70	sta $7003	       STA XX7003
+.7293	90 03		bcc $7298	       BCC XX7298
+.7295	ee 04 70	inc $7004	       INC XX7004
+.7298	60		rts		XX7298 RTS
+>7299	aa				       .BYTE $AA
+>729a	aa				       .BYTE $AA
+>729b	aa				       .BYTE $AA
+>729c	aa				       .BYTE $AA
+>729d	aa				       .BYTE $AA
+>729e	aa				       .BYTE $AA
+>729f	aa				       .BYTE $AA
+
+;******  End of listing

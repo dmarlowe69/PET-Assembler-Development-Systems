@@ -1,0 +1,13 @@
+
+C:\Users\Denton\Desktop\Pet Assembler\_universal wedge\Assembler>64tass wedge.asm -L wedge.lst -o wedge.prg  
+64tass Turbo Assembler Macro V1.53.1515
+64TASS comes with ABSOLUTELY NO WARRANTY; This is free software, and you
+are welcome to redistribute it under certain conditions; See LICENSE!
+
+Assembling file:   wedge.asm
+Error messages:    None
+Warning messages:  None
+Passes:            3
+Memory range:      $0401-$08af   $04af
+
+C:\Users\Denton\Desktop\Pet Assembler\_universal wedge\Assembler>rem pause 

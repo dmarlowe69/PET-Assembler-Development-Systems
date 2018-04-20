@@ -1,0 +1,13 @@
+
+C:\Users\Denton\Desktop\Pet Assembler2\hiloader\hiloader16>64tass hiloader16.asm -L hiloader16.lst -o hiloader16.prg  
+64tass Turbo Assembler Macro V1.53.1515
+64TASS comes with ABSOLUTELY NO WARRANTY; This is free software, and you
+are welcome to redistribute it under certain conditions; See LICENSE!
+
+Assembling file:   hiloader16.asm
+Error messages:    None
+Warning messages:  None
+Passes:            3
+Memory range:      $3000-$329f   $02a0
+
+C:\Users\Denton\Desktop\Pet Assembler2\hiloader\hiloader16>rem pause 

@@ -1,0 +1,13 @@
+
+C:\Users\Denton\Desktop\Pet Assembler\assembler.4\Ass1.0>64tass ass4.asm -L ass4.lst -o ass4.prg  
+64tass Turbo Assembler Macro V1.53.1515
+64TASS comes with ABSOLUTELY NO WARRANTY; This is free software, and you
+are welcome to redistribute it under certain conditions; See LICENSE!
+
+Assembling file:   ass4.asm
+Error messages:    None
+Warning messages:  None
+Passes:            3
+Memory range:      $0400-$2177   $1d78
+
+C:\Users\Denton\Desktop\Pet Assembler\assembler.4\Ass1.0>rem pause 

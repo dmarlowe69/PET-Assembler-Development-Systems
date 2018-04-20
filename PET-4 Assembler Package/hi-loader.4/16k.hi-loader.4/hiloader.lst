@@ -1,0 +1,285 @@
+
+; 64tass Turbo Assembler Macro V1.53.1515 listing file
+; 64tass -L hiloader.lst -o hiloader.prg hiloader.asm
+; Thu Apr 05 17:18:27 2018
+
+;Offset	;Hex		;Monitor	;Source
+
+;******  Processing input file: hiloader.asm
+
+=$ffc6					CHKIN=$FFC6
+=$ffcc					CLRCHN=$FFCC
+=$ffcf					CHRIN=$FFCF
+.3000	4c 1e 30	jmp $301e	       JMP XX301E
+>3003	aa				XX3003 .BYTE $AA
+>3004	aa				XX3004 .BYTE $AA
+>3005	aa				XX3005 .BYTE $AA
+>3006	aa				XX3006 .BYTE $AA
+>3007	aa				XX3007 .BYTE $AA
+>3008	aa				XX3008 .BYTE $AA
+>3009	aa				XX3009 .BYTE $AA
+>300a	aa				XX300A .BYTE $AA
+>300b	aa				XX300B .BYTE $AA
+>300c	aa				XX300C .BYTE $AA
+>300d	aa				XX300D .BYTE $AA
+>300e	aa				       .BYTE $AA
+>300f	aa				       .BYTE $AA
+>3010	aa				       .BYTE $AA
+>3011	aa				       .BYTE $AA
+>3012	aa				       .BYTE $AA
+>3013	aa				       .BYTE $AA
+>3014	aa				       .BYTE $AA
+>3015	aa				       .BYTE $AA
+>3016	aa				       .BYTE $AA
+>3017	aa				       .BYTE $AA
+>3018	aa				       .BYTE $AA
+>3019	aa				       .BYTE $AA
+>301a	aa				       .BYTE $AA
+>301b	aa				       .BYTE $AA
+>301c	aa				       .BYTE $AA
+>301d	aa				XX301D .BYTE $AA
+.301e	a9 00		lda #$00	XX301E LDA #$00
+.3020	8d 0c 30	sta $300c	       STA XX300C
+.3023	8d 1d 30	sta $301d	       STA XX301D
+.3026	8d 08 30	sta $3008	       STA XX3008
+.3029	8d 09 30	sta $3009	       STA XX3009
+.302c	8d 05 30	sta $3005	       STA XX3005
+.302f	8d 06 30	sta $3006	       STA XX3006
+.3032	a2 40		ldx #$40	       LDX #$40      ;'@'
+.3034	20 98 31	jsr $3198	       JSR XX3198
+.3037	20 cf ff	jsr $ffcf	XX3037 JSR CHRIN
+.303a	c9 20		cmp #$20	       CMP #$20      ;' '
+.303c	f0 f9		beq $3037	       BEQ XX3037
+.303e	c9 0d		cmp #$0d	       CMP #$0D
+.3040	f0 10		beq $3052	       BEQ XX3052
+.3042	20 6b d7	jsr $d76b	       JSR $D76B
+.3045	90 d7		bcc $301e	       BCC XX301E
+.3047	8d 06 30	sta $3006	       STA XX3006
+.304a	20 63 d7	jsr $d763	       JSR $D763
+.304d	90 cf		bcc $301e	       BCC XX301E
+.304f	8d 05 30	sta $3005	       STA XX3005
+.3052	a2 8e		ldx #$8e	XX3052 LDX #AA062D-XX31AE ;#$8E
+.3054	20 98 31	jsr $3198	       JSR XX3198
+.3057	a2 28		ldx #$28	       LDX #$28      ;'('
+.3059	8e 0a 30	stx $300a	       STX XX300A
+.305c	ce 0a 30	dec $300a	XX305C DEC XX300A
+.305f	f0 bd		beq $301e	       BEQ XX301E
+.3061	20 cf ff	jsr $ffcf	       JSR CHRIN
+.3064	c9 20		cmp #$20	       CMP #$20      ;' '
+.3066	f0 f4		beq $305c	       BEQ XX305C
+.3068	c9 0d		cmp #$0d	       CMP #$0D
+.306a	d0 03		bne $306f	       BNE XX306F
+.306c	4c 88 31	jmp $3188	       JMP XX3188
+.306f	a2 00		ldx #$00	XX306F LDX #$00
+.3071	8e 1d 30	stx $301d	       STX XX301D
+.3074	f0 07		beq $307d	       BEQ XX307D
+.3076	20 cf ff	jsr $ffcf	XX3076 JSR CHRIN
+.3079	c9 20		cmp #$20	       CMP #$20      ;' '
+.307b	f0 15		beq $3092	       BEQ XX3092
+.307d	c9 0d		cmp #$0d	XX307D CMP #$0D
+.307f	f0 11		beq $3092	       BEQ XX3092
+.3081	ae 1d 30	ldx $301d	       LDX XX301D
+.3084	e0 0e		cpx #$0e	       CPX #$0E
+.3086	f0 96		beq $301e	       BEQ XX301E
+.3088	9d 0d 30	sta $300d,x	       STA XX300D,X
+.308b	e8		inx		       INX
+.308c	8e 1d 30	stx $301d	       STX XX301D
+.308f	4c 76 30	jmp $3076	       JMP XX3076
+.3092	a9 2c		lda #$2c	XX3092 LDA #$2C      ;','
+.3094	9d 0d 30	sta $300d,x	       STA XX300D,X
+.3097	e8		inx		       INX
+.3098	a9 53		lda #$53	       LDA #$53      ;'S'
+.309a	9d 0d 30	sta $300d,x	       STA XX300D,X
+.309d	e8		inx		       INX
+.309e	8e 1d 30	stx $301d	       STX XX301D
+.30a1	a9 0d		lda #$0d	       LDA #$0D
+.30a3	20 02 e2	jsr $e202	       JSR $E202
+.30a6	a9 07		lda #$07	       LDA #$07
+.30a8	85 d2		sta $d2		       STA $D2
+.30aa	a9 02		lda #$02	       LDA #$02
+.30ac	85 d1		sta $d1		       STA $D1
+.30ae	a9 08		lda #$08	       LDA #$08
+.30b0	85 d4		sta $d4		       STA $D4
+.30b2	a9 0f		lda #$0f	       LDA #$0F
+.30b4	85 d3		sta $d3		       STA $D3
+.30b6	a9 49		lda #$49	       LDA #$49      ;'I'
+.30b8	8d 03 30	sta $3003	       STA XX3003
+.30bb	a9 30		lda #$30	       LDA #$30      ;'0'
+.30bd	8d 04 30	sta $3004	       STA XX3004
+.30c0	a9 30		lda #$30	       LDA #$30      ;'0'
+.30c2	85 db		sta $db		       STA $DB
+.30c4	a9 03		lda #$03	       LDA #$03
+.30c6	85 da		sta $da		       STA $DA
+.30c8	20 63 f5	jsr $f563	       JSR $F563
+.30cb	a9 07		lda #$07	       LDA #$07
+.30cd	20 e2 f2	jsr $f2e2	       JSR $F2E2
+.30d0	a9 31		lda #$31	       LDA #$31      ;'1'
+.30d2	8d 04 30	sta $3004	       STA XX3004
+.30d5	20 63 f5	jsr $f563	       JSR $F563
+.30d8	a9 07		lda #$07	       LDA #$07
+.30da	20 e2 f2	jsr $f2e2	       JSR $F2E2
+.30dd	a9 07		lda #$07	       LDA #$07
+.30df	85 d3		sta $d3		       STA $D3
+.30e1	a9 30		lda #$30	       LDA #$30      ;'0'
+.30e3	85 db		sta $db		       STA $DB
+.30e5	a9 0d		lda #$0d	       LDA #$0D
+.30e7	85 da		sta $da		       STA $DA
+.30e9	ad 1d 30	lda $301d	       LDA XX301D
+.30ec	85 d1		sta $d1		       STA $D1
+.30ee	20 63 f5	jsr $f563	       JSR $F563
+.30f1	20 35 f3	jsr $f335	XX30F1 JSR $F335
+.30f4	d0 03		bne $30f9	       BNE XX30F9
+.30f6	4c 80 31	jmp $3180	       JMP XX3180
+.30f9	20 71 32	jsr $3271	XX30F9 JSR XX3271
+.30fc	c9 3b		cmp #$3b	       CMP #$3B      ;';'
+.30fe	d0 f1		bne $30f1	       BNE XX30F1
+.3100	a9 00		lda #$00	       LDA #$00
+.3102	8d 03 30	sta $3003	       STA XX3003
+.3105	8d 04 30	sta $3004	       STA XX3004
+.3108	8d 0a 30	sta $300a	       STA XX300A
+.310b	20 4f 32	jsr $324f	       JSR XX324F
+.310e	d0 12		bne $3122	       BNE XX3122
+.3110	20 4f 32	jsr $324f	       JSR XX324F
+.3113	cd 09 30	cmp $3009	       CMP XX3009
+.3116	d0 6b		bne $3183	       BNE XX3183
+.3118	20 4f 32	jsr $324f	       JSR XX324F
+.311b	cd 08 30	cmp $3008	       CMP XX3008
+.311e	d0 63		bne $3183	       BNE XX3183
+.3120	f0 66		beq $3188	       BEQ XX3188
+.3122	8d 07 30	sta $3007	XX3122 STA XX3007
+.3125	ee 08 30	inc $3008	       INC XX3008
+.3128	d0 03		bne $312d	       BNE XX312D
+.312a	ee 09 30	inc $3009	       INC XX3009
+.312d	20 8c 32	jsr $328c	XX312D JSR XX328C
+.3130	20 4f 32	jsr $324f	       JSR XX324F
+.3133	48		pha		       PHA
+.3134	18		clc		       CLC
+.3135	6d 06 30	adc $3006	       ADC XX3006
+.3138	85 43		sta $43		       STA $43
+.313a	68		pla		       PLA
+.313b	20 8c 32	jsr $328c	       JSR XX328C
+.313e	20 4f 32	jsr $324f	       JSR XX324F
+.3141	48		pha		       PHA
+.3142	18		clc		       CLC
+.3143	6d 05 30	adc $3005	       ADC XX3005
+.3146	85 42		sta $42		       STA $42
+.3148	90 02		bcc $314c	       BCC XX314C
+.314a	e6 43		inc $43		       INC $43
+.314c	68		pla		XX314C PLA
+.314d	20 8c 32	jsr $328c	       JSR XX328C
+.3150	20 4f 32	jsr $324f	XX3150 JSR XX324F
+.3153	ac 0a 30	ldy $300a	       LDY XX300A
+.3156	ee 0a 30	inc $300a	       INC XX300A
+.3159	91 42		sta ($42),y	       STA ($42),Y
+.315b	d1 42		cmp ($42),y	       CMP ($42),Y
+.315d	d0 1b		bne $317a	       BNE XX317A
+.315f	20 8c 32	jsr $328c	       JSR XX328C
+.3162	ce 07 30	dec $3007	       DEC XX3007
+.3165	d0 e9		bne $3150	       BNE XX3150
+.3167	20 4f 32	jsr $324f	       JSR XX324F
+.316a	cd 04 30	cmp $3004	       CMP XX3004
+.316d	d0 0e		bne $317d	       BNE XX317D
+.316f	20 4f 32	jsr $324f	       JSR XX324F
+.3172	cd 03 30	cmp $3003	       CMP XX3003
+.3175	d0 06		bne $317d	       BNE XX317D
+.3177	4c f1 30	jmp $30f1	       JMP XX30F1
+.317a	a2 24		ldx #$24	XX317A LDX #AA05C3-XX31AE ;#$24      ;'$'
+>317c	2c				       .BYTE $2C ;BIT ZP SKIP
+.317d	a2 31		ldx #$31	XX317D LDX #AA05D0-XX31AE ;#$31      ;'1'
+>317f	2c				       .BYTE $2C ;BIT ZP SKIP
+.3180	a2 11		ldx #$11	XX3180 LDX #AA05B0-XX31AE ;#$11
+>3182	2c				       .BYTE $2C ;BIT ZP SKIP
+.3183	a2 00		ldx #$00	XX3183 LDX #$00
+.3185	20 98 31	jsr $3198	       JSR XX3198
+.3188	a9 07		lda #$07	XX3188 LDA #$07
+.318a	20 e2 f2	jsr $f2e2	       JSR $F2E2
+.318d	20 cc ff	jsr $ffcc	       JSR CLRCHN
+.3190	a2 18		ldx #$18	       LDX #AA05B7-XX31AE ;#$18
+.3192	20 98 31	jsr $3198	       JSR XX3198
+.3195	4c ff b3	jmp $b3ff	       JMP $B3FF
+.3198	8e 0a 30	stx $300a	XX3198 STX XX300A
+.319b	ae 0a 30	ldx $300a	XX319B LDX XX300A
+.319e	bd ae 31	lda $31ae,x	       LDA XX31AE,X
+.31a1	08		php		       PHP
+.31a2	29 7f		and #$7f	       AND #$7F
+.31a4	20 02 e2	jsr $e202	       JSR $E202
+.31a7	ee 0a 30	inc $300a	       INC XX300A
+.31aa	28		plp		       PLP
+.31ab	10 ee		bpl $319b	       BPL XX319B
+.31ad	60		rts		       RTS
+>31ae	0d				XX31AE .BYTE $0D
+>31af	42 41 44 20 52 45 43 4f		       .TEXT 'BAD RECORD COUN'
+>31b7	52 44 20 43 4f 55 4e
+>31be	d4				       .BYTE $D4
+>31bf	0d				AA05B0 .BYTE $0D
+>31c0	42 52 45 41 4b			       .TEXT 'BREAK'
+>31c5	8d				       .BYTE $8D
+>31c6	0d				AA05B7 .BYTE $0D
+>31c7	45 4e 44 20 4f 46 20 4c		       .TEXT 'END OF LOA'
+>31cf	4f 41
+>31d1	c4				       .BYTE $C4
+>31d2	0d				AA05C3 .BYTE $0D
+>31d3	4e 4f 4e 2d 52 41 4d 20		       .TEXT 'NON-RAM LOA'
+>31db	4c 4f 41
+>31de	c4				       .BYTE $C4
+>31df	0d				AA05D0 .BYTE $0D
+>31e0	43 48 45 43 4b 53 55 4d		       .TEXT 'CHECKSUM ERRO'
+>31e8	20 45 52 52 4f
+>31ed	d2				       .BYTE $D2
+>31ee	0d				AA05DF .BYTE $0D
+>31ef	0d				       .BYTE $0D
+>31f0	0d				       .BYTE $0D
+>31f1	31 36 4b 20 4c 4f 41 44		       .TEXT '16K LOADER V121379'
+>31f9	45 52 20 56 31 32 31 33 37 39
+>3203	0d				       .BYTE $0D
+>3204	28 43 29 20 31 39 37 39		       .TEXT '(C) 1979 BY COMMODORE BUSINESS MACHINES'
+>320c	20 42 59 20 43 4f 4d 4d 4f 44 4f 52 45 20 42 55
+>321c	53 49 4e 45 53 53 20 4d 41 43 48 49 4e 45 53
+>322b	0d				       .BYTE $0D
+>322c	0d				       .BYTE $0D
+>322d	0d				       .BYTE $0D
+>322e	49 4e 50 55 54 20 4f 46		       .TEXT 'INPUT OFFSET?'
+>3236	46 53 45 54 3f
+>323b	a0				       .BYTE $A0
+>323c	0d				AA062D .BYTE $0D
+>323d	4f 42 4a 45 43 54 20 46		       .TEXT 'OBJECT FILE NAME?'
+>3245	49 4c 45 20 4e 41 4d 45 3f
+>324e	a0				       .BYTE $A0
+.324f	20 71 32	jsr $3271	XX324F JSR XX3271
+.3252	20 66 32	jsr $3266	       JSR XX3266
+.3255	0a		asl a		       ASL A
+.3256	0a		asl a		       ASL A
+.3257	0a		asl a		       ASL A
+.3258	0a		asl a		       ASL A
+.3259	8d 0b 30	sta $300b	       STA XX300B
+.325c	20 71 32	jsr $3271	       JSR XX3271
+.325f	20 66 32	jsr $3266	       JSR XX3266
+.3262	0d 0b 30	ora $300b	       ORA XX300B
+.3265	60		rts		       RTS
+.3266	c9 3a		cmp #$3a	XX3266 CMP #$3A      ;':'
+.3268	08		php		       PHP
+.3269	29 0f		and #$0f	       AND #$0F
+.326b	28		plp		       PLP
+.326c	90 02		bcc $3270	       BCC XX3270
+.326e	69 08		adc #$08	       ADC #$08
+.3270	60		rts		XX3270 RTS
+.3271	ad 0c 30	lda $300c	XX3271 LDA XX300C
+.3274	c9 07		cmp #$07	       CMP #$07
+.3276	f0 0b		beq $3283	       BEQ XX3283
+.3278	20 cc ff	jsr $ffcc	       JSR CLRCHN
+.327b	a2 07		ldx #$07	       LDX #$07
+.327d	8e 0c 30	stx $300c	       STX XX300C
+.3280	20 c6 ff	jsr $ffc6	       JSR CHKIN
+.3283	20 cf ff	jsr $ffcf	XX3283 JSR CHRIN
+.3286	48		pha		       PHA
+.3287	20 02 e2	jsr $e202	       JSR $E202
+.328a	68		pla		       PLA
+.328b	60		rts		       RTS
+.328c	18		clc		XX328C CLC
+.328d	6d 03 30	adc $3003	       ADC XX3003
+.3290	8d 03 30	sta $3003	       STA XX3003
+.3293	90 03		bcc $3298	       BCC XX3298
+.3295	ee 04 30	inc $3004	       INC XX3004
+.3298	60		rts		XX3298 RTS
+
+;******  End of listing

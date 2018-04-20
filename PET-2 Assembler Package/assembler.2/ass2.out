@@ -1,0 +1,13 @@
+
+C:\My Commodore\Commodore 2018\Commodore Macro Assembler Development System\PET Assembler Development Systems\PET-2 Assembler Development Systems\PET-2 Assembler Package\assembler.2>64tass ass2.asm -L ass2.lst -o ass2.prg  
+64tass Turbo Assembler Macro V1.53.1515
+64TASS comes with ABSOLUTELY NO WARRANTY; This is free software, and you
+are welcome to redistribute it under certain conditions; See LICENSE!
+
+Assembling file:   ass2.asm
+Error messages:    None
+Warning messages:  None
+Passes:            3
+Memory range:      $0400-$20ff   $1d00
+
+C:\My Commodore\Commodore 2018\Commodore Macro Assembler Development System\PET Assembler Development Systems\PET-2 Assembler Development Systems\PET-2 Assembler Package\assembler.2>rem pause 

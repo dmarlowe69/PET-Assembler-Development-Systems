@@ -1,0 +1,13 @@
+
+C:\Users\Denton\Desktop\Pet Assembler2\editor\editor16>64tass editor16.asm -L editor16.lst -o editor16.prg  
+64tass Turbo Assembler Macro V1.53.1515
+64TASS comes with ABSOLUTELY NO WARRANTY; This is free software, and you
+are welcome to redistribute it under certain conditions; See LICENSE!
+
+Assembling file:   editor16.asm
+Error messages:    None
+Warning messages:  None
+Passes:            3
+Memory range:      $3000-$3611   $0612
+
+C:\Users\Denton\Desktop\Pet Assembler2\editor\editor16>rem pause 

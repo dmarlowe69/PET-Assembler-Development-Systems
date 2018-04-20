@@ -1,0 +1,270 @@
+
+; 64tass Turbo Assembler Macro V1.53.1515 listing file
+; 64tass -L loader.lst -o loader.prg loader.asm
+; Thu Apr 05 16:53:37 2018
+
+;Offset	;Hex		;Monitor	;Source
+
+;******  Processing input file: loader.asm
+
+=$ffc6					CHKIN=$FFC6
+=$ffcc					CLRCHN=$FFCC
+=$ffcf					CHRIN=$FFCF
+>0400	00				HH0400 .BYTE $00
+>0401	0d 04				HH0401 .WORD BASIC
+>0403	0a 00				       .BYTE $0A,$00
+>0405	9e				       .BYTE $9E
+>0406	28 31 30 33 39 29		       .TEXT '(1039)'
+>040c	00				       .BYTE $00
+>040d	00 00				BASIC  .BYTE $00,$00
+.040f	a9 00		lda #$00	XX040F LDA #$00
+.0411	8d 83 02	sta $0283	       STA $0283
+.0414	8d 94 02	sta $0294	       STA $0294
+.0417	8d 7f 02	sta $027f	       STA $027F
+.041a	8d 80 02	sta $0280	       STA $0280
+.041d	8d 7c 02	sta $027c	       STA $027C
+.0420	8d 7d 02	sta $027d	       STA $027D
+.0423	a2 40		ldx #$40	       LDX #AA05DF-XX059F ;#$40      ;'@'
+.0425	20 89 05	jsr $0589	       JSR XX0589
+.0428	20 cf ff	jsr $ffcf	XX0428 JSR CHRIN
+.042b	c9 20		cmp #$20	       CMP #$20      ;' '
+.042d	f0 f9		beq $0428	       BEQ XX0428
+.042f	c9 0d		cmp #$0d	       CMP #$0D
+.0431	f0 10		beq $0443	       BEQ XX0443
+.0433	20 6b d7	jsr $d76b	       JSR $D76B
+.0436	90 d7		bcc $040f	       BCC XX040F
+.0438	8d 7d 02	sta $027d	       STA $027D
+.043b	20 63 d7	jsr $d763	       JSR $D763
+.043e	90 cf		bcc $040f	       BCC XX040F
+.0440	8d 7c 02	sta $027c	       STA $027C
+.0443	a2 8e		ldx #$8e	XX0443 LDX #AA062D-XX059F ;#$8E
+.0445	20 89 05	jsr $0589	       JSR XX0589
+.0448	a2 28		ldx #$28	       LDX #$28      ;'('
+.044a	8e 81 02	stx $0281	       STX $0281
+.044d	ce 81 02	dec $0281	XX044D DEC $0281
+.0450	f0 bd		beq $040f	       BEQ XX040F
+.0452	20 cf ff	jsr $ffcf	       JSR CHRIN
+.0455	c9 20		cmp #$20	       CMP #$20      ;' '
+.0457	f0 f4		beq $044d	       BEQ XX044D
+.0459	c9 0d		cmp #$0d	       CMP #$0D
+.045b	d0 03		bne $0460	       BNE XX0460
+.045d	4c 79 05	jmp $0579	       JMP XX0579
+.0460	a2 00		ldx #$00	XX0460 LDX #$00
+.0462	8e 94 02	stx $0294	       STX $0294
+.0465	f0 07		beq $046e	       BEQ XX046E
+.0467	20 cf ff	jsr $ffcf	XX0467 JSR CHRIN
+.046a	c9 20		cmp #$20	       CMP #$20      ;' '
+.046c	f0 15		beq $0483	       BEQ XX0483
+.046e	c9 0d		cmp #$0d	XX046E CMP #$0D
+.0470	f0 11		beq $0483	       BEQ XX0483
+.0472	ae 94 02	ldx $0294	       LDX $0294
+.0475	e0 0e		cpx #$0e	       CPX #$0E
+.0477	f0 96		beq $040f	       BEQ XX040F
+.0479	9d 84 02	sta $0284,x	       STA $0284,X
+.047c	e8		inx		       INX
+.047d	8e 94 02	stx $0294	       STX $0294
+.0480	4c 67 04	jmp $0467	       JMP XX0467
+.0483	a9 2c		lda #$2c	XX0483 LDA #$2C      ;','
+.0485	9d 84 02	sta $0284,x	       STA $0284,X
+.0488	e8		inx		       INX
+.0489	a9 53		lda #$53	       LDA #$53      ;'S'
+.048b	9d 84 02	sta $0284,x	       STA $0284,X
+.048e	e8		inx		       INX
+.048f	8e 94 02	stx $0294	       STX $0294
+.0492	a9 0d		lda #$0d	       LDA #$0D
+.0494	20 02 e2	jsr $e202	       JSR $E202
+.0497	a9 07		lda #$07	       LDA #$07
+.0499	85 d2		sta $d2		       STA $D2
+.049b	a9 02		lda #$02	       LDA #$02
+.049d	85 d1		sta $d1		       STA $D1
+.049f	a9 08		lda #$08	       LDA #$08
+.04a1	85 d4		sta $d4		       STA $D4
+.04a3	a9 0f		lda #$0f	       LDA #$0F
+.04a5	85 d3		sta $d3		       STA $D3
+.04a7	a9 49		lda #$49	       LDA #$49      ;'I'
+.04a9	8d 7a 02	sta $027a	       STA $027A
+.04ac	a9 30		lda #$30	       LDA #$30      ;'0'
+.04ae	8d 7b 02	sta $027b	       STA $027B
+.04b1	a9 02		lda #$02	       LDA #$02
+.04b3	85 db		sta $db		       STA $DB
+.04b5	a9 7a		lda #$7a	       LDA #$7A
+.04b7	85 da		sta $da		       STA $DA
+.04b9	20 63 f5	jsr $f563	       JSR $F563
+.04bc	a9 07		lda #$07	       LDA #$07
+.04be	20 e2 f2	jsr $f2e2	       JSR $F2E2
+.04c1	a9 31		lda #$31	       LDA #$31      ;'1'
+.04c3	8d 7b 02	sta $027b	       STA $027B
+.04c6	20 63 f5	jsr $f563	       JSR $F563
+.04c9	a9 07		lda #$07	       LDA #$07
+.04cb	20 e2 f2	jsr $f2e2	       JSR $F2E2
+.04ce	a9 07		lda #$07	       LDA #$07
+.04d0	85 d3		sta $d3		       STA $D3
+.04d2	a9 02		lda #$02	       LDA #$02
+.04d4	85 db		sta $db		       STA $DB
+.04d6	a9 84		lda #$84	       LDA #$84
+.04d8	85 da		sta $da		       STA $DA
+.04da	ad 94 02	lda $0294	       LDA $0294
+.04dd	85 d1		sta $d1		       STA $D1
+.04df	20 63 f5	jsr $f563	       JSR $F563
+.04e2	20 35 f3	jsr $f335	XX04E2 JSR $F335
+.04e5	d0 03		bne $04ea	       BNE XX04EA
+.04e7	4c 71 05	jmp $0571	       JMP XX0571
+.04ea	20 62 06	jsr $0662	XX04EA JSR XX0662
+.04ed	c9 3b		cmp #$3b	       CMP #$3B      ;';'
+.04ef	d0 f1		bne $04e2	       BNE XX04E2
+.04f1	a9 00		lda #$00	       LDA #$00
+.04f3	8d 7a 02	sta $027a	       STA $027A
+.04f6	8d 7b 02	sta $027b	       STA $027B
+.04f9	8d 81 02	sta $0281	       STA $0281
+.04fc	20 40 06	jsr $0640	       JSR XX0640
+.04ff	d0 12		bne $0513	       BNE XX0513
+.0501	20 40 06	jsr $0640	       JSR XX0640
+.0504	cd 80 02	cmp $0280	       CMP $0280
+.0507	d0 6b		bne $0574	       BNE XX0574
+.0509	20 40 06	jsr $0640	       JSR XX0640
+.050c	cd 7f 02	cmp $027f	       CMP $027F
+.050f	d0 63		bne $0574	       BNE XX0574
+.0511	f0 66		beq $0579	       BEQ XX0579
+.0513	8d 7e 02	sta $027e	XX0513 STA $027E
+.0516	ee 7f 02	inc $027f	       INC $027F
+.0519	d0 03		bne $051e	       BNE XX051E
+.051b	ee 80 02	inc $0280	       INC $0280
+.051e	20 7d 06	jsr $067d	XX051E JSR XX067D
+.0521	20 40 06	jsr $0640	       JSR XX0640
+.0524	48		pha		       PHA
+.0525	18		clc		       CLC
+.0526	6d 7d 02	adc $027d	       ADC $027D
+.0529	85 43		sta $43		       STA $43
+.052b	68		pla		       PLA
+.052c	20 7d 06	jsr $067d	       JSR XX067D
+.052f	20 40 06	jsr $0640	       JSR XX0640
+.0532	48		pha		       PHA
+.0533	18		clc		       CLC
+.0534	6d 7c 02	adc $027c	       ADC $027C
+.0537	85 42		sta $42		       STA $42
+.0539	90 02		bcc $053d	       BCC XX053D
+.053b	e6 43		inc $43		       INC $43
+.053d	68		pla		XX053D PLA
+.053e	20 7d 06	jsr $067d	       JSR XX067D
+.0541	20 40 06	jsr $0640	XX0541 JSR XX0640
+.0544	ac 81 02	ldy $0281	       LDY $0281
+.0547	ee 81 02	inc $0281	       INC $0281
+.054a	91 42		sta ($42),y	       STA ($42),Y
+.054c	d1 42		cmp ($42),y	       CMP ($42),Y
+.054e	d0 1b		bne $056b	       BNE XX056B
+.0550	20 7d 06	jsr $067d	       JSR XX067D
+.0553	ce 7e 02	dec $027e	       DEC $027E
+.0556	d0 e9		bne $0541	       BNE XX0541
+.0558	20 40 06	jsr $0640	       JSR XX0640
+.055b	cd 7b 02	cmp $027b	       CMP $027B
+.055e	d0 0e		bne $056e	       BNE XX056E
+.0560	20 40 06	jsr $0640	       JSR XX0640
+.0563	cd 7a 02	cmp $027a	       CMP $027A
+.0566	d0 06		bne $056e	       BNE XX056E
+.0568	4c e2 04	jmp $04e2	       JMP XX04E2
+.056b	a2 24		ldx #$24	XX056B LDX #AA05C3-XX059F ;#$24      ;'$'
+>056d	2c				       .BYTE $2C ;BIT ZP SKIP
+.056e	a2 31		ldx #$31	XX056E LDX #AA05D0-XX059F ;#$31      ;'1'
+>0570	2c				       .BYTE $2C ;BIT ZP SKIP
+.0571	a2 11		ldx #$11	XX0571 LDX #AA05B0-XX059F ;#$11
+>0573	2c				       .BYTE $2C ;BIT ZP SKIP
+.0574	a2 00		ldx #$00	XX0574 LDX #$00
+.0576	20 89 05	jsr $0589	       JSR XX0589
+.0579	a9 07		lda #$07	XX0579 LDA #$07
+.057b	20 e2 f2	jsr $f2e2	       JSR $F2E2
+.057e	20 cc ff	jsr $ffcc	       JSR CLRCHN
+.0581	a2 18		ldx #$18	       LDX #AA05B7-XX059F ;#$18
+.0583	20 89 05	jsr $0589	       JSR XX0589
+.0586	4c ff b3	jmp $b3ff	       JMP $B3FF
+.0589	8e 81 02	stx $0281	XX0589 STX $0281
+.058c	ae 81 02	ldx $0281	XX058C LDX $0281
+.058f	bd 9f 05	lda $059f,x	       LDA XX059F,X
+.0592	08		php		       PHP
+.0593	29 7f		and #$7f	       AND #$7F
+.0595	20 02 e2	jsr $e202	       JSR $E202
+.0598	ee 81 02	inc $0281	       INC $0281
+.059b	28		plp		       PLP
+.059c	10 ee		bpl $058c	       BPL XX058C
+.059e	60		rts		       RTS
+>059f	0d				XX059F .BYTE $0D
+>05a0	42 41 44 20 52 45 43 4f		       .TEXT 'BAD RECORD COUN'
+>05a8	52 44 20 43 4f 55 4e
+>05af	d4				       .BYTE $D4
+>05b0	0d				AA05B0 .BYTE $0D
+>05b1	42 52 45 41 4b			       .TEXT 'BREAK'
+>05b6	8d				       .BYTE $8D
+>05b7	0d				AA05B7 .BYTE $0D
+>05b8	45 4e 44 20 4f 46 20 4c		       .TEXT 'END OF LOA'
+>05c0	4f 41
+>05c2	c4				       .BYTE $C4
+>05c3	0d				AA05C3 .BYTE $0D
+>05c4	4e 4f 4e 2d 52 41 4d 20		       .TEXT 'NON-RAM LOA'
+>05cc	4c 4f 41
+>05cf	c4				       .BYTE $C4
+>05d0	0d				AA05D0 .BYTE $0D
+>05d1	43 48 45 43 4b 53 55 4d		       .TEXT 'CHECKSUM ERRO'
+>05d9	20 45 52 52 4f
+>05de	d2				       .BYTE $D2
+>05df	0d				AA05DF .BYTE $0D
+>05e0	0d				       .BYTE $0D
+>05e1	0d				       .BYTE $0D
+>05e2	4c 4f 57 20 4c 4f 41 44		       .TEXT 'LOW LOADER V121379'
+>05ea	45 52 20 56 31 32 31 33 37 39
+>05f4	0d				       .BYTE $0D
+>05f5	28 43 29 20 31 39 37 39		       .TEXT '(C) 1979 BY COMMODORE BUSINESS MACHINES'
+>05fd	20 42 59 20 43 4f 4d 4d 4f 44 4f 52 45 20 42 55
+>060d	53 49 4e 45 53 53 20 4d 41 43 48 49 4e 45 53
+>061c	0d				       .BYTE $0D
+>061d	0d				       .BYTE $0D
+>061e	0d				       .BYTE $0D
+>061f	49 4e 50 55 54 20 4f 46		       .TEXT 'INPUT OFFSET?'
+>0627	46 53 45 54 3f
+>062c	a0				       .BYTE $A0
+>062d	0d				AA062D .BYTE $0D
+>062e	4f 42 4a 45 43 54 20 46		       .TEXT 'OBJECT FILE NAME?'
+>0636	49 4c 45 20 4e 41 4d 45 3f
+>063f	a0				       .BYTE $A0
+.0640	20 62 06	jsr $0662	XX0640 JSR XX0662
+.0643	20 57 06	jsr $0657	       JSR XX0657
+.0646	0a		asl a		       ASL A
+.0647	0a		asl a		       ASL A
+.0648	0a		asl a		       ASL A
+.0649	0a		asl a		       ASL A
+.064a	8d 82 02	sta $0282	       STA $0282
+.064d	20 62 06	jsr $0662	       JSR XX0662
+.0650	20 57 06	jsr $0657	       JSR XX0657
+.0653	0d 82 02	ora $0282	       ORA $0282
+.0656	60		rts		       RTS
+.0657	c9 3a		cmp #$3a	XX0657 CMP #$3A      ;':'
+.0659	08		php		       PHP
+.065a	29 0f		and #$0f	       AND #$0F
+.065c	28		plp		       PLP
+.065d	90 02		bcc $0661	       BCC XX0661
+.065f	69 08		adc #$08	       ADC #$08
+.0661	60		rts		XX0661 RTS
+.0662	ad 83 02	lda $0283	XX0662 LDA $0283
+.0665	c9 07		cmp #$07	       CMP #$07
+.0667	f0 0b		beq $0674	       BEQ XX0674
+.0669	20 cc ff	jsr $ffcc	       JSR CLRCHN
+.066c	a2 07		ldx #$07	       LDX #$07
+.066e	8e 83 02	stx $0283	       STX $0283
+.0671	20 c6 ff	jsr $ffc6	       JSR CHKIN
+.0674	20 cf ff	jsr $ffcf	XX0674 JSR CHRIN
+.0677	48		pha		       PHA
+.0678	20 02 e2	jsr $e202	       JSR $E202
+.067b	68		pla		       PLA
+.067c	60		rts		       RTS
+.067d	18		clc		XX067D CLC
+.067e	6d 7a 02	adc $027a	       ADC $027A
+.0681	8d 7a 02	sta $027a	       STA $027A
+.0684	90 03		bcc $0689	       BCC XX0689
+.0686	ee 7b 02	inc $027b	       INC $027B
+.0689	60		rts		XX0689 RTS
+.068a	aa		tax		       TAX
+.068b	aa		tax		       TAX
+.068c	aa		tax		       TAX
+.068d	aa		tax		       TAX
+.068e	aa		tax		       TAX
+.068f	aa		tax		       TAX
+
+;******  End of listing

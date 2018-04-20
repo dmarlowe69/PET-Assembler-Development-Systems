@@ -1,0 +1,748 @@
+
+; 64tass Turbo Assembler Macro V1.53.1515 listing file
+; 64tass -L wedge.lst -o wedge.prg wedge.asm
+; Thu Apr 05 18:32:56 2018
+
+;Offset	;Hex		;Monitor	;Source
+
+;******  Processing input file: wedge.asm
+
+=$ffe4					GETIN=$FFE4
+>0401	17 04				HH0401 .WORD HH0417
+>0403	05 00				       .WORD $0005
+>0405	41				       .BYTE $41 ;'A'
+>0406	b2				       .BYTE $B2 ;'='
+>0407	31				       .BYTE $31 ;'1'
+>0408	32				       .BYTE $32 ;'2'
+>0409	ac				       .BYTE $AC ;'*'
+>040a	31				       .BYTE $31 ;'1'
+>040b	36				       .BYTE $36 ;'6'
+>040c	ae				       .BYTE $AE ;'^'
+>040d	33				       .BYTE $33 ;'3'
+>040e	3a				       .BYTE $3A ;':'
+>040f	8f				       .BYTE $8F ;'REM'
+>0410	20				       .BYTE $20 ;' '
+>0411	24				       .BYTE $24 ;'$'
+>0412	43				       .BYTE $43 ;'C'
+>0413	30				       .BYTE $30 ;'0'
+>0414	30				       .BYTE $30 ;'0'
+>0415	30				       .BYTE $30 ;'0'
+>0416	00				       .BYTE $00 ;END OF LINE
+>0417	34 04				HH0417 .WORD HH0434
+>0419	0a 00				       .WORD $000A
+>041b	8b				       .BYTE $8B
+>041c	c2				       .BYTE $C2
+>041d	28				       .BYTE $28
+>041e	41				       .BYTE $41
+>041f	29				       .BYTE $29
+>0420	b3				       .BYTE $B3
+>0421	b1				       .BYTE $B1
+>0422	37				       .BYTE $37
+>0423	36				       .BYTE $36
+>0424	a7				       .BYTE $A7
+>0425	9e				       .BYTE $9E
+>0426	31				       .BYTE $31
+>0427	36				       .BYTE $36
+>0428	33				       .BYTE $33
+>0429	39				       .BYTE $39
+>042a	3a				       .BYTE $3A
+>042b	8f				       .BYTE $8F
+>042c	20				       .BYTE $20
+>042d	42				       .BYTE $42
+>042e	41				       .BYTE $41
+>042f	53				       .BYTE $53
+>0430	49				       .BYTE $49
+>0431	43				       .BYTE $43
+>0432	32				       .BYTE $32
+>0433	00				       .BYTE $00 ;END OF LINE
+>0434	50 04				HH0434 .WORD HH0450
+>0436	0f 00				       .WORD $000F
+>0438	8b				       .BYTE $8B
+>0439	c2				       .BYTE $C2
+>043a	28				       .BYTE $28
+>043b	41				       .BYTE $41
+>043c	29				       .BYTE $29
+>043d	b2				       .BYTE $B2
+>043e	37				       .BYTE $37
+>043f	36				       .BYTE $36
+>0440	a7				       .BYTE $A7
+>0441	9e				       .BYTE $9E
+>0442	32				       .BYTE $32
+>0443	31				       .BYTE $31
+>0444	35				       .BYTE $35
+>0445	31				       .BYTE $31
+>0446	3a				       .BYTE $3A
+>0447	8f				       .BYTE $8F
+>0448	20				       .BYTE $20
+>0449	42				       .BYTE $42
+>044a	41				       .BYTE $41
+>044b	53				       .BYTE $53
+>044c	49				       .BYTE $49
+>044d	43				       .BYTE $43
+>044e	34				       .BYTE $34
+>044f	00				       .BYTE $00 ;END OF LINE
+>0450	8f 04				HH0450 .WORD HH048F
+>0452	14 00				       .WORD $0014
+>0454	99				       .BYTE $99
+>0455	22				       .BYTE $22
+>0456	93				       .BYTE $93
+>0457	11				       .BYTE $11
+>0458	11				       .BYTE $11
+>0459	11				       .BYTE $11
+>045a	11				       .BYTE $11
+>045b	11				       .BYTE $11
+>045c	11				       .BYTE $11
+>045d	11				       .BYTE $11
+>045e	11				       .BYTE $11
+>045f	11				       .BYTE $11
+>0460	11				       .BYTE $11
+>0461	11				       .BYTE $11
+>0462	11				       .BYTE $11
+>0463	20				       .BYTE $20
+>0464	20				       .BYTE $20
+>0465	20				       .BYTE $20
+>0466	20				       .BYTE $20
+>0467	20				       .BYTE $20
+>0468	20				       .BYTE $20
+>0469	55				       .BYTE $55
+>046a	4e				       .BYTE $4E
+>046b	49				       .BYTE $49
+>046c	56				       .BYTE $56
+>046d	45				       .BYTE $45
+>046e	52				       .BYTE $52
+>046f	53				       .BYTE $53
+>0470	41				       .BYTE $41
+>0471	4c				       .BYTE $4C
+>0472	20				       .BYTE $20
+>0473	44				       .BYTE $44
+>0474	4f				       .BYTE $4F
+>0475	53				       .BYTE $53
+>0476	20				       .BYTE $20
+>0477	53				       .BYTE $53
+>0478	55				       .BYTE $55
+>0479	50				       .BYTE $50
+>047a	50				       .BYTE $50
+>047b	4f				       .BYTE $4F
+>047c	52				       .BYTE $52
+>047d	54				       .BYTE $54
+>047e	20				       .BYTE $20
+>047f	4c				       .BYTE $4C
+>0480	4f				       .BYTE $4F
+>0481	41				       .BYTE $41
+>0482	44				       .BYTE $44
+>0483	45				       .BYTE $45
+>0484	44				       .BYTE $44
+>0485	11				       .BYTE $11
+>0486	11				       .BYTE $11
+>0487	11				       .BYTE $11
+>0488	11				       .BYTE $11
+>0489	11				       .BYTE $11
+>048a	11				       .BYTE $11
+>048b	11				       .BYTE $11
+>048c	11				       .BYTE $11
+>048d	22				       .BYTE $22
+>048e	00				       .BYTE $00
+>048f	95 04				HH048F .WORD HH0495
+>0491	1e 00				       .WORD $001E
+>0493	a2				       .BYTE $A2 ;'NEW'
+>0494	00				       .BYTE $00 ;END OF LINE
+>0495	00 00				HH0495 .WORD $0000
+>0497	aa				       .BYTE $AA
+>0498	aa				       .BYTE $AA
+>0499	aa				       .BYTE $AA
+>049a	aa				       .BYTE $AA
+>049b	aa				       .BYTE $AA
+>049c	aa				       .BYTE $AA
+>049d	aa				       .BYTE $AA
+>049e	aa				       .BYTE $AA
+>049f	aa				       .BYTE $AA
+>04a0	aa				       .BYTE $AA
+>04a1	aa				       .BYTE $AA
+>04a2	aa				       .BYTE $AA
+>04a3	aa				       .BYTE $AA
+>04a4	aa				       .BYTE $AA
+>04a5	aa				       .BYTE $AA
+>04a6	aa				       .BYTE $AA
+>04a7	aa				       .BYTE $AA
+>04a8	aa				       .BYTE $AA
+>04a9	aa				       .BYTE $AA
+>04aa	aa				       .BYTE $AA
+>04ab	aa				       .BYTE $AA
+>04ac	aa				       .BYTE $AA
+>04ad	aa				       .BYTE $AA
+>04ae	aa				       .BYTE $AA
+>04af	aa				       .BYTE $AA
+>04b0	aa				       .BYTE $AA
+>04b1	aa				       .BYTE $AA
+>04b2	aa				       .BYTE $AA
+>04b3	aa				       .BYTE $AA
+>04b4	aa				       .BYTE $AA
+>04b5	aa				       .BYTE $AA
+>04b6	aa				       .BYTE $AA
+>04b7	aa				       .BYTE $AA
+>04b8	aa				       .BYTE $AA
+>04b9	aa				       .BYTE $AA
+>04ba	aa				       .BYTE $AA
+>04bb	aa				       .BYTE $AA
+>04bc	aa				       .BYTE $AA
+>04bd	aa				       .BYTE $AA
+>04be	aa				       .BYTE $AA
+>04bf	aa				       .BYTE $AA
+>04c0	aa				       .BYTE $AA
+>04c1	aa				       .BYTE $AA
+>04c2	aa				       .BYTE $AA
+>04c3	aa				       .BYTE $AA
+>04c4	aa				       .BYTE $AA
+>04c5	aa				       .BYTE $AA
+>04c6	aa				       .BYTE $AA
+>04c7	aa				       .BYTE $AA
+>04c8	aa				       .BYTE $AA
+>04c9	aa				       .BYTE $AA
+>04ca	aa				       .BYTE $AA
+>04cb	aa				       .BYTE $AA
+>04cc	aa				       .BYTE $AA
+>04cd	aa				       .BYTE $AA
+>04ce	aa				       .BYTE $AA
+>04cf	aa				       .BYTE $AA
+>04d0	aa				       .BYTE $AA
+>04d1	aa				       .BYTE $AA
+>04d2	aa				       .BYTE $AA
+>04d3	aa				       .BYTE $AA
+>04d4	aa				       .BYTE $AA
+>04d5	aa				       .BYTE $AA
+>04d6	aa				       .BYTE $AA
+>04d7	aa				       .BYTE $AA
+>04d8	aa				       .BYTE $AA
+>04d9	aa				       .BYTE $AA
+>04da	aa				       .BYTE $AA
+>04db	aa				       .BYTE $AA
+>04dc	aa				       .BYTE $AA
+>04dd	aa				       .BYTE $AA
+>04de	aa				       .BYTE $AA
+>04df	aa				       .BYTE $AA
+>04e0	aa				       .BYTE $AA
+>04e1	aa				       .BYTE $AA
+>04e2	aa				       .BYTE $AA
+>04e3	aa				       .BYTE $AA
+>04e4	aa				       .BYTE $AA
+>04e5	aa				       .BYTE $AA
+>04e6	aa				       .BYTE $AA
+>04e7	aa				       .BYTE $AA
+>04e8	aa				       .BYTE $AA
+>04e9	aa				       .BYTE $AA
+>04ea	aa				       .BYTE $AA
+>04eb	aa				       .BYTE $AA
+>04ec	aa				       .BYTE $AA
+>04ed	aa				       .BYTE $AA
+>04ee	aa				       .BYTE $AA
+>04ef	aa				       .BYTE $AA
+>04f0	aa				       .BYTE $AA
+>04f1	aa				       .BYTE $AA
+>04f2	aa				       .BYTE $AA
+>04f3	aa				       .BYTE $AA
+>04f4	aa				       .BYTE $AA
+>04f5	aa				       .BYTE $AA
+>04f6	aa				       .BYTE $AA
+>04f7	aa				       .BYTE $AA
+>04f8	aa				       .BYTE $AA
+>04f9	aa				       .BYTE $AA
+>04fa	aa				       .BYTE $AA
+>04fb	aa				       .BYTE $AA
+>04fc	aa				       .BYTE $AA
+>04fd	aa				       .BYTE $AA
+>04fe	aa				       .BYTE $AA
+>04ff	aa				       .BYTE $AA
+>0500	ea				       .BYTE $EA
+.0501	e6 77		inc $77		       INC $77
+.0503	d0 02		bne $0507	       BNE XX0507
+.0505	e6 78		inc $78		       INC $78
+.0507	86 b3		stx $b3		XX0507 STX $B3
+.0509	ba		tsx		       TSX
+.050a	bd 01 01	lda $0101,x	       LDA $0101,X
+.050d	c9 9b		cmp #$9b	       CMP #$9B
+.050f	d0 3a		bne $054b	       BNE XX054B
+.0511	bd 02 01	lda $0102,x	       LDA $0102,X
+.0514	c9 c3		cmp #$c3	       CMP #$C3
+.0516	d0 33		bne $054b	       BNE XX054B
+.0518	a5 77		lda $77		       LDA $77
+.051a	d0 2c		bne $0548	       BNE XX0548
+.051c	a5 78		lda $78		       LDA $78
+.051e	c9 02		cmp #$02	       CMP #$02
+.0520	d0 26		bne $0548	       BNE XX0548
+.0522	a0 00		ldy #$00	       LDY #$00
+.0524	84 b3		sty $b3		       STY $B3
+.0526	b1 77		lda ($77),y	       LDA ($77),Y
+.0528	c9 3e		cmp #$3e	       CMP #$3E      ;'>'
+.052a	f0 11		beq $053d	       BEQ XX053D
+.052c	c9 40		cmp #$40	       CMP #$40      ;'@'
+.052e	f0 0d		beq $053d	       BEQ XX053D
+.0530	c8		iny		       INY
+.0531	85 b3		sta $b3		       STA $B3
+.0533	c9 2f		cmp #$2f	       CMP #$2F      ;'/'
+.0535	f0 63		beq $059a	       BEQ XX059A
+.0537	c9 5e		cmp #$5e	       CMP #$5E      ;'^'
+.0539	f0 5f		beq $059a	       BEQ XX059A
+.053b	d0 0b		bne $0548	       BNE XX0548
+.053d	c8		iny		XX053D INY
+.053e	b1 77		lda ($77),y	       LDA ($77),Y
+.0540	f0 32		beq $0574	       BEQ XX0574
+.0542	c9 24		cmp #$24	       CMP #$24      ;'$'
+.0544	f0 54		beq $059a	       BEQ XX059A
+.0546	d0 08		bne $0550	       BNE XX0550
+.0548	4c 76 00	jmp $0076	XX0548 JMP $0076
+.054b	a6 b3		ldx $b3		XX054B LDX $B3
+.054d	4c 76 00	jmp $0076	       JMP $0076
+.0550	a9 08		lda #$08	XX0550 LDA #$08
+.0552	85 d4		sta $d4		       STA $D4
+.0554	a9 6f		lda #$6f	       LDA #$6F
+.0556	85 d3		sta $d3		       STA $D3
+.0558	20 ba f0	jsr $f0ba	       JSR $F0BA
+.055b	a5 d3		lda $d3		       LDA $D3
+.055d	20 28 f1	jsr $f128	       JSR $F128
+.0560	e6 77		inc $77		XX0560 INC $77
+.0562	a0 00		ldy #$00	       LDY #$00
+.0564	b1 77		lda ($77),y	       LDA ($77),Y
+.0566	f0 06		beq $056e	       BEQ XX056E
+.0568	20 6f f1	jsr $f16f	       JSR $F16F
+.056b	b8		clv		       CLV
+.056c	50 f2		bvc $0560	       BVC XX0560
+.056e	20 83 f1	jsr $f183	XX056E JSR $F183
+.0571	b8		clv		       CLV
+.0572	50 23		bvc $0597	       BVC XX0597
+.0574	84 77		sty $77		XX0574 STY $77
+.0576	a9 08		lda #$08	       LDA #$08
+.0578	85 d4		sta $d4		       STA $D4
+.057a	20 b6 f0	jsr $f0b6	       JSR $F0B6
+.057d	a9 6f		lda #$6f	       LDA #$6F
+.057f	85 d3		sta $d3		       STA $D3
+.0581	20 28 f1	jsr $f128	       JSR $F128
+.0584	20 8c f1	jsr $f18c	XX0584 JSR $F18C
+.0587	c9 0d		cmp #$0d	       CMP #$0D
+.0589	f0 06		beq $0591	       BEQ XX0591
+.058b	20 d8 e3	jsr $e3d8	       JSR $E3D8
+.058e	b8		clv		       CLV
+.058f	50 f3		bvc $0584	       BVC XX0584
+.0591	20 d8 e3	jsr $e3d8	XX0591 JSR $E3D8
+.0594	20 7f f1	jsr $f17f	       JSR $F17F
+.0597	4c 76 00	jmp $0076	XX0597 JMP $0076
+.059a	c8		iny		XX059A INY
+.059b	b1 77		lda ($77),y	       LDA ($77),Y
+.059d	d0 fb		bne $059a	       BNE XX059A
+.059f	88		dey		       DEY
+.05a0	84 d1		sty $d1		       STY $D1
+.05a2	a9 01		lda #$01	       LDA #$01
+.05a4	85 da		sta $da		       STA $DA
+.05a6	a9 02		lda #$02	       LDA #$02
+.05a8	85 db		sta $db		       STA $DB
+.05aa	a9 08		lda #$08	       LDA #$08
+.05ac	85 d4		sta $d4		       STA $D4
+.05ae	a5 b3		lda $b3		       LDA $B3
+.05b0	d0 39		bne $05eb	       BNE XX05EB
+.05b2	a9 60		lda #$60	       LDA #$60
+.05b4	85 d3		sta $d3		       STA $D3
+.05b6	20 66 f4	jsr $f466	       JSR $F466
+.05b9	20 b6 f0	jsr $f0b6	       JSR $F0B6
+.05bc	a5 d3		lda $d3		       LDA $D3
+.05be	20 28 f1	jsr $f128	       JSR $F128
+.05c1	a9 00		lda #$00	       LDA #$00
+.05c3	85 96		sta $96		       STA $96
+.05c5	a0 03		ldy #$03	       LDY #$03
+.05c7	84 d1		sty $d1		XX05C7 STY $D1
+.05c9	20 8c f1	jsr $f18c	       JSR $F18C
+.05cc	85 fd		sta $fd		       STA $FD
+.05ce	a4 96		ldy $96		       LDY $96
+.05d0	d0 1b		bne $05ed	       BNE XX05ED
+.05d2	20 8c f1	jsr $f18c	       JSR $F18C
+.05d5	85 fe		sta $fe		       STA $FE
+.05d7	a4 96		ldy $96		       LDY $96
+.05d9	d0 12		bne $05ed	       BNE XX05ED
+.05db	a4 d1		ldy $d1		       LDY $D1
+.05dd	88		dey		       DEY
+.05de	d0 e7		bne $05c7	       BNE XX05C7
+.05e0	a6 fd		ldx $fd		       LDX $FD
+.05e2	a5 fe		lda $fe		       LDA $FE
+.05e4	20 d9 dc	jsr $dcd9	       JSR $DCD9
+.05e7	a9 20		lda #$20	       LDA #$20      ;' '
+.05e9	d0 06		bne $05f1	       BNE XX05F1
+.05eb	d0 40		bne $062d	XX05EB BNE XX062D
+.05ed	d0 31		bne $0620	XX05ED BNE XX0620
+.05ef	d0 d6		bne $05c7	XX05EF BNE XX05C7
+.05f1	20 d8 e3	jsr $e3d8	XX05F1 JSR $E3D8
+.05f4	20 8c f1	jsr $f18c	XX05F4 JSR $F18C
+.05f7	a6 96		ldx $96		       LDX $96
+.05f9	d0 25		bne $0620	       BNE XX0620
+.05fb	c9 00		cmp #$00	       CMP #$00
+.05fd	f0 18		beq $0617	       BEQ XX0617
+.05ff	20 d8 e3	jsr $e3d8	       JSR $E3D8
+.0602	20 01 f3	jsr $f301	       JSR $F301
+.0605	f0 19		beq $0620	       BEQ XX0620
+.0607	20 e4 ff	jsr $ffe4	       JSR GETIN
+.060a	f0 e8		beq $05f4	       BEQ XX05F4
+.060c	c9 20		cmp #$20	       CMP #$20      ;' '
+.060e	d0 e4		bne $05f4	       BNE XX05F4
+.0610	20 e4 ff	jsr $ffe4	XX0610 JSR GETIN
+.0613	f0 fb		beq $0610	       BEQ XX0610
+.0615	d0 dd		bne $05f4	       BNE XX05F4
+.0617	a9 0d		lda #$0d	XX0617 LDA #$0D
+.0619	20 d8 e3	jsr $e3d8	       JSR $E3D8
+.061c	a0 02		ldy #$02	       LDY #$02
+.061e	d0 cf		bne $05ef	       BNE XX05EF
+.0620	20 f0 f6	jsr $f6f0	XX0620 JSR $F6F0
+.0623	a9 0d		lda #$0d	       LDA #$0D
+.0625	20 d8 e3	jsr $e3d8	       JSR $E3D8
+.0628	68		pla		       PLA
+.0629	68		pla		       PLA
+.062a	4c 89 c3	jmp $c389	       JMP $C389
+.062d	a9 00		lda #$00	XX062D LDA #$00
+.062f	85 96		sta $96		       STA $96
+.0631	85 9d		sta $9d		       STA $9D
+.0633	20 22 f3	jsr $f322	       JSR $F322
+.0636	a5 96		lda $96		       LDA $96
+.0638	29 10		and #$10	       AND #$10
+.063a	d0 28		bne $0664	       BNE XX0664
+.063c	ad 84 f3	lda $f384	       LDA $F384
+.063f	30 06		bmi $0647	       BMI XX0647
+.0641	e6 c9		inc $c9		       INC $C9
+.0643	d0 02		bne $0647	       BNE XX0647
+.0645	e6 ca		inc $ca		       INC $CA
+.0647	a5 ca		lda $ca		XX0647 LDA $CA
+.0649	85 2b		sta $2b		       STA $2B
+.064b	a5 c9		lda $c9		       LDA $C9
+.064d	85 2a		sta $2a		       STA $2A
+.064f	20 72 c5	jsr $c572	       JSR $C572
+.0652	20 42 c4	jsr $c442	       JSR $C442
+.0655	a5 b3		lda $b3		       LDA $B3
+.0657	c9 2f		cmp #$2f	       CMP #$2F      ;'/'
+.0659	d0 03		bne $065e	       BNE XX065E
+.065b	4c 89 c3	jmp $c389	       JMP $C389
+.065e	20 a7 c5	jsr $c5a7	XX065E JSR $C5A7
+.0661	4c c4 c6	jmp $c6c4	       JMP $C6C4
+.0664	4c e6 f3	jmp $f3e6	XX0664 JMP $F3E6
+.0667	a5 34		lda $34		       LDA $34
+.0669	18		clc		       CLC
+.066a	e9 67		sbc #$67	       SBC #$67
+.066c	85 34		sta $34		       STA $34
+.066e	a5 35		lda $35		       LDA $35
+.0670	e9 01		sbc #$01	       SBC #$01
+.0672	85 35		sta $35		       STA $35
+.0674	a0 01		ldy #$01	       LDY #$01
+.0676	a9 00		lda #$00	       LDA #$00
+.0678	85 c7		sta $c7		       STA $C7
+.067a	a9 05		lda #$05	       LDA #$05
+.067c	85 c8		sta $c8		       STA $C8
+.067e	a5 34		lda $34		       LDA $34
+.0680	85 5c		sta $5c		       STA $5C
+.0682	a5 35		lda $35		       LDA $35
+.0684	85 5d		sta $5d		       STA $5D
+.0686	b1 c7		lda ($c7),y	XX0686 LDA ($C7),Y
+.0688	91 5c		sta ($5c),y	       STA ($5C),Y
+.068a	c8		iny		       INY
+.068b	d0 f9		bne $0686	       BNE XX0686
+.068d	e6 5d		inc $5d		       INC $5D
+.068f	e6 c8		inc $c8		       INC $C8
+.0691	a5 c8		lda $c8		       LDA $C8
+.0693	c9 06		cmp #$06	       CMP #$06
+.0695	f0 02		beq $0699	       BEQ XX0699
+.0697	b0 04		bcs $069d	       BCS XX069D
+.0699	a0 00		ldy #$00	XX0699 LDY #$00
+.069b	f0 e9		beq $0686	       BEQ XX0686
+.069d	a9 4c		lda #$4c	XX069D LDA #$4C      ;'L'
+.069f	85 70		sta $70		       STA $70
+.06a1	a4 34		ldy $34		       LDY $34
+.06a3	a6 35		ldx $35		       LDX $35
+.06a5	c8		iny		       INY
+.06a6	d0 01		bne $06a9	       BNE XX06A9
+.06a8	e8		inx		       INX
+.06a9	84 71		sty $71		XX06A9 STY $71
+.06ab	86 72		stx $72		       STX $72
+.06ad	60		rts		       RTS
+>06ae	aa				       .BYTE $AA
+>06af	aa				       .BYTE $AA
+>06b0	aa				       .BYTE $AA
+>06b1	aa				       .BYTE $AA
+>06b2	aa				       .BYTE $AA
+>06b3	aa				       .BYTE $AA
+>06b4	aa				       .BYTE $AA
+>06b5	aa				       .BYTE $AA
+>06b6	aa				       .BYTE $AA
+>06b7	aa				       .BYTE $AA
+>06b8	aa				       .BYTE $AA
+>06b9	aa				       .BYTE $AA
+>06ba	aa				       .BYTE $AA
+>06bb	aa				       .BYTE $AA
+>06bc	aa				       .BYTE $AA
+>06bd	aa				       .BYTE $AA
+>06be	aa				       .BYTE $AA
+>06bf	aa				       .BYTE $AA
+>06c0	aa				       .BYTE $AA
+>06c1	aa				       .BYTE $AA
+>06c2	aa				       .BYTE $AA
+>06c3	aa				       .BYTE $AA
+>06c4	aa				       .BYTE $AA
+>06c5	aa				       .BYTE $AA
+>06c6	aa				       .BYTE $AA
+>06c7	aa				       .BYTE $AA
+>06c8	aa				       .BYTE $AA
+>06c9	aa				       .BYTE $AA
+>06ca	aa				       .BYTE $AA
+>06cb	aa				       .BYTE $AA
+>06cc	aa				       .BYTE $AA
+>06cd	aa				       .BYTE $AA
+>06ce	aa				       .BYTE $AA
+>06cf	aa				       .BYTE $AA
+>06d0	aa				       .BYTE $AA
+>06d1	aa				       .BYTE $AA
+>06d2	aa				       .BYTE $AA
+>06d3	aa				       .BYTE $AA
+>06d4	aa				       .BYTE $AA
+>06d5	aa				       .BYTE $AA
+>06d6	aa				       .BYTE $AA
+>06d7	aa				       .BYTE $AA
+>06d8	aa				       .BYTE $AA
+>06d9	aa				       .BYTE $AA
+>06da	aa				       .BYTE $AA
+>06db	aa				       .BYTE $AA
+>06dc	aa				       .BYTE $AA
+>06dd	aa				       .BYTE $AA
+>06de	aa				       .BYTE $AA
+>06df	aa				       .BYTE $AA
+>06e0	aa				       .BYTE $AA
+>06e1	aa				       .BYTE $AA
+>06e2	aa				       .BYTE $AA
+>06e3	aa				       .BYTE $AA
+>06e4	aa				       .BYTE $AA
+>06e5	aa				       .BYTE $AA
+>06e6	aa				       .BYTE $AA
+>06e7	aa				       .BYTE $AA
+>06e8	aa				       .BYTE $AA
+>06e9	aa				       .BYTE $AA
+>06ea	aa				       .BYTE $AA
+>06eb	aa				       .BYTE $AA
+>06ec	aa				       .BYTE $AA
+>06ed	aa				       .BYTE $AA
+>06ee	aa				       .BYTE $AA
+>06ef	aa				       .BYTE $AA
+>06f0	aa				       .BYTE $AA
+>06f1	aa				       .BYTE $AA
+>06f2	aa				       .BYTE $AA
+>06f3	aa				       .BYTE $AA
+>06f4	aa				       .BYTE $AA
+>06f5	aa				       .BYTE $AA
+>06f6	aa				       .BYTE $AA
+>06f7	aa				       .BYTE $AA
+>06f8	aa				       .BYTE $AA
+>06f9	aa				       .BYTE $AA
+>06fa	aa				       .BYTE $AA
+>06fb	aa				       .BYTE $AA
+>06fc	aa				       .BYTE $AA
+>06fd	aa				       .BYTE $AA
+>06fe	aa				       .BYTE $AA
+>06ff	aa				       .BYTE $AA
+.0700	ea		nop		       NOP
+.0701	e6 77		inc $77		       INC $77
+.0703	d0 02		bne $0707	       BNE XX0707
+.0705	e6 78		inc $78		       INC $78
+.0707	86 b3		stx $b3		XX0707 STX $B3
+.0709	ba		tsx		       TSX
+.070a	bd 01 01	lda $0101,x	       LDA $0101,X
+.070d	c9 0f		cmp #$0f	       CMP #$0F
+.070f	d0 3a		bne $074b	       BNE XX074B
+.0711	bd 02 01	lda $0102,x	       LDA $0102,X
+.0714	c9 b4		cmp #$b4	       CMP #$B4
+.0716	d0 33		bne $074b	       BNE XX074B
+.0718	a5 77		lda $77		       LDA $77
+.071a	d0 2c		bne $0748	       BNE XX0748
+.071c	a5 78		lda $78		       LDA $78
+.071e	c9 02		cmp #$02	       CMP #$02
+.0720	d0 26		bne $0748	       BNE XX0748
+.0722	a0 00		ldy #$00	       LDY #$00
+.0724	84 b3		sty $b3		       STY $B3
+.0726	b1 77		lda ($77),y	       LDA ($77),Y
+.0728	c9 3e		cmp #$3e	       CMP #$3E      ;'>'
+.072a	f0 11		beq $073d	       BEQ XX073D
+.072c	c9 40		cmp #$40	       CMP #$40      ;'@'
+.072e	f0 0d		beq $073d	       BEQ XX073D
+.0730	c8		iny		       INY
+.0731	85 b3		sta $b3		       STA $B3
+.0733	c9 2f		cmp #$2f	       CMP #$2F      ;'/'
+.0735	f0 63		beq $079a	       BEQ XX079A
+.0737	c9 5e		cmp #$5e	       CMP #$5E      ;'^'
+.0739	f0 5f		beq $079a	       BEQ XX079A
+.073b	d0 0b		bne $0748	       BNE XX0748
+.073d	c8		iny		XX073D INY
+.073e	b1 77		lda ($77),y	       LDA ($77),Y
+.0740	f0 32		beq $0774	       BEQ XX0774
+.0742	c9 24		cmp #$24	       CMP #$24      ;'$'
+.0744	f0 54		beq $079a	       BEQ XX079A
+.0746	d0 08		bne $0750	       BNE XX0750
+.0748	4c 76 00	jmp $0076	XX0748 JMP $0076
+.074b	a6 b3		ldx $b3		XX074B LDX $B3
+.074d	4c 76 00	jmp $0076	       JMP $0076
+.0750	a9 08		lda #$08	XX0750 LDA #$08
+.0752	85 d4		sta $d4		       STA $D4
+.0754	a9 6f		lda #$6f	       LDA #$6F
+.0756	85 d3		sta $d3		       STA $D3
+.0758	20 d5 f0	jsr $f0d5	       JSR $F0D5
+.075b	a5 d3		lda $d3		       LDA $D3
+.075d	20 43 f1	jsr $f143	       JSR $F143
+.0760	e6 77		inc $77		XX0760 INC $77
+.0762	a0 00		ldy #$00	       LDY #$00
+.0764	b1 77		lda ($77),y	       LDA ($77),Y
+.0766	f0 06		beq $076e	       BEQ XX076E
+.0768	20 9e f1	jsr $f19e	       JSR $F19E
+.076b	b8		clv		       CLV
+.076c	50 f2		bvc $0760	       BVC XX0760
+.076e	20 b9 f1	jsr $f1b9	XX076E JSR $F1B9
+.0771	b8		clv		       CLV
+.0772	50 23		bvc $0797	       BVC XX0797
+.0774	84 77		sty $77		XX0774 STY $77
+.0776	a9 08		lda #$08	       LDA #$08
+.0778	85 d4		sta $d4		       STA $D4
+.077a	20 d2 f0	jsr $f0d2	       JSR $F0D2
+.077d	a9 6f		lda #$6f	       LDA #$6F
+.077f	85 d3		sta $d3		       STA $D3
+.0781	20 43 f1	jsr $f143	       JSR $F143
+.0784	20 c0 f1	jsr $f1c0	XX0784 JSR $F1C0
+.0787	c9 0d		cmp #$0d	       CMP #$0D
+.0789	f0 06		beq $0791	       BEQ XX0791
+.078b	20 02 e2	jsr $e202	       JSR $E202
+.078e	b8		clv		       CLV
+.078f	50 f3		bvc $0784	       BVC XX0784
+.0791	20 02 e2	jsr $e202	XX0791 JSR $E202
+.0794	20 ae f1	jsr $f1ae	       JSR $F1AE
+.0797	4c 76 00	jmp $0076	XX0797 JMP $0076
+.079a	c8		iny		XX079A INY
+.079b	b1 77		lda ($77),y	       LDA ($77),Y
+.079d	d0 fb		bne $079a	       BNE XX079A
+.079f	88		dey		       DEY
+.07a0	84 d1		sty $d1		       STY $D1
+.07a2	a9 01		lda #$01	       LDA #$01
+.07a4	85 da		sta $da		       STA $DA
+.07a6	a9 02		lda #$02	       LDA #$02
+.07a8	85 db		sta $db		       STA $DB
+.07aa	a9 08		lda #$08	       LDA #$08
+.07ac	85 d4		sta $d4		       STA $D4
+.07ae	a5 b3		lda $b3		       LDA $B3
+.07b0	d0 39		bne $07eb	       BNE XX07EB
+.07b2	a9 60		lda #$60	       LDA #$60
+.07b4	85 d3		sta $d3		       STA $D3
+.07b6	20 a5 f4	jsr $f4a5	       JSR $F4A5
+.07b9	20 d2 f0	jsr $f0d2	       JSR $F0D2
+.07bc	a5 d3		lda $d3		       LDA $D3
+.07be	20 43 f1	jsr $f143	       JSR $F143
+.07c1	a9 00		lda #$00	       LDA #$00
+.07c3	85 96		sta $96		       STA $96
+.07c5	a0 03		ldy #$03	       LDY #$03
+.07c7	84 d1		sty $d1		XX07C7 STY $D1
+.07c9	20 c0 f1	jsr $f1c0	       JSR $F1C0
+.07cc	85 fd		sta $fd		       STA $FD
+.07ce	a4 96		ldy $96		       LDY $96
+.07d0	d0 1b		bne $07ed	       BNE XX07ED
+.07d2	20 c0 f1	jsr $f1c0	       JSR $F1C0
+.07d5	85 fe		sta $fe		       STA $FE
+.07d7	a4 96		ldy $96		       LDY $96
+.07d9	d0 12		bne $07ed	       BNE XX07ED
+.07db	a4 d1		ldy $d1		       LDY $D1
+.07dd	88		dey		       DEY
+.07de	d0 e7		bne $07c7	       BNE XX07C7
+.07e0	a6 fd		ldx $fd		       LDX $FD
+.07e2	a5 fe		lda $fe		       LDA $FE
+.07e4	20 83 cf	jsr $cf83	       JSR $CF83
+.07e7	a9 20		lda #$20	       LDA #$20      ;' '
+.07e9	d0 06		bne $07f1	       BNE XX07F1
+.07eb	d0 40		bne $082d	XX07EB BNE XX082D
+.07ed	d0 31		bne $0820	XX07ED BNE XX0820
+.07ef	d0 d6		bne $07c7	XX07EF BNE XX07C7
+.07f1	20 02 e2	jsr $e202	XX07F1 JSR $E202
+.07f4	20 c0 f1	jsr $f1c0	XX07F4 JSR $F1C0
+.07f7	a6 96		ldx $96		       LDX $96
+.07f9	d0 25		bne $0820	       BNE XX0820
+.07fb	c9 00		cmp #$00	       CMP #$00
+.07fd	f0 18		beq $0817	       BEQ XX0817
+.07ff	20 02 e2	jsr $e202	       JSR $E202
+.0802	20 35 f3	jsr $f335	       JSR $F335
+.0805	f0 19		beq $0820	       BEQ XX0820
+.0807	20 e4 ff	jsr $ffe4	       JSR GETIN
+.080a	f0 e8		beq $07f4	       BEQ XX07F4
+.080c	c9 20		cmp #$20	       CMP #$20      ;' '
+.080e	d0 e4		bne $07f4	       BNE XX07F4
+.0810	20 e4 ff	jsr $ffe4	XX0810 JSR GETIN
+.0813	f0 fb		beq $0810	       BEQ XX0810
+.0815	d0 dd		bne $07f4	       BNE XX07F4
+.0817	a9 0d		lda #$0d	XX0817 LDA #$0D
+.0819	20 02 e2	jsr $e202	       JSR $E202
+.081c	a0 02		ldy #$02	       LDY #$02
+.081e	d0 cf		bne $07ef	       BNE XX07EF
+.0820	20 2f f7	jsr $f72f	XX0820 JSR $F72F
+.0823	a9 0d		lda #$0d	       LDA #$0D
+.0825	20 02 e2	jsr $e202	       JSR $E202
+.0828	68		pla		       PLA
+.0829	68		pla		       PLA
+.082a	4c ff b3	jmp $b3ff	       JMP $B3FF
+.082d	a9 00		lda #$00	XX082D LDA #$00
+.082f	85 96		sta $96		       STA $96
+.0831	85 9d		sta $9d		       STA $9D
+.0833	20 56 f3	jsr $f356	       JSR $F356
+.0836	a5 96		lda $96		       LDA $96
+.0838	29 10		and #$10	       AND #$10
+.083a	d0 28		bne $0864	       BNE XX0864
+.083c	ad 84 f3	lda $f384	       LDA $F384
+.083f	30 06		bmi $0847	       BMI XX0847
+.0841	e6 c9		inc $c9		       INC $C9
+.0843	d0 02		bne $0847	       BNE XX0847
+.0845	e6 ca		inc $ca		       INC $CA
+.0847	a5 ca		lda $ca		XX0847 LDA $CA
+.0849	85 2b		sta $2b		       STA $2B
+.084b	a5 c9		lda $c9		       LDA $C9
+.084d	85 2a		sta $2a		       STA $2A
+.084f	20 e9 b5	jsr $b5e9	       JSR $B5E9
+.0852	20 b6 b4	jsr $b4b6	       JSR $B4B6
+.0855	a5 b3		lda $b3		       LDA $B3
+.0857	c9 2f		cmp #$2f	       CMP #$2F      ;'/'
+.0859	d0 03		bne $085e	       BNE XX085E
+.085b	4c ff b3	jmp $b3ff	       JMP $B3FF
+.085e	20 22 b6	jsr $b622	XX085E JSR $B622
+.0861	4c 4a b7	jmp $b74a	       JMP $B74A
+.0864	4c 25 f4	jmp $f425	XX0864 JMP $F425
+.0867	a5 34		lda $34		       LDA $34
+.0869	18		clc		       CLC
+.086a	e9 67		sbc #$67	       SBC #$67
+.086c	85 34		sta $34		       STA $34
+.086e	a5 35		lda $35		       LDA $35
+.0870	e9 01		sbc #$01	       SBC #$01
+.0872	85 35		sta $35		       STA $35
+.0874	a0 01		ldy #$01	       LDY #$01
+.0876	a9 00		lda #$00	       LDA #$00
+.0878	85 c7		sta $c7		       STA $C7
+.087a	a9 07		lda #$07	       LDA #$07
+.087c	85 c8		sta $c8		       STA $C8
+.087e	a5 34		lda $34		       LDA $34
+.0880	85 5c		sta $5c		       STA $5C
+.0882	a5 35		lda $35		       LDA $35
+.0884	85 5d		sta $5d		       STA $5D
+.0886	b1 c7		lda ($c7),y	XX0886 LDA ($C7),Y
+.0888	91 5c		sta ($5c),y	       STA ($5C),Y
+.088a	c8		iny		       INY
+.088b	d0 f9		bne $0886	       BNE XX0886
+.088d	e6 5d		inc $5d		       INC $5D
+.088f	e6 c8		inc $c8		       INC $C8
+.0891	a5 c8		lda $c8		       LDA $C8
+.0893	c9 08		cmp #$08	       CMP #$08
+.0895	f0 02		beq $0899	       BEQ XX0899
+.0897	b0 04		bcs $089d	       BCS XX089D
+.0899	a0 00		ldy #$00	XX0899 LDY #$00
+.089b	f0 e9		beq $0886	       BEQ XX0886
+.089d	a9 4c		lda #$4c	XX089D LDA #$4C      ;'L'
+.089f	85 70		sta $70		       STA $70
+.08a1	a4 34		ldy $34		       LDY $34
+.08a3	a6 35		ldx $35		       LDX $35
+.08a5	c8		iny		       INY
+.08a6	d0 01		bne $08a9	       BNE XX08A9
+.08a8	e8		inx		       INX
+.08a9	84 71		sty $71		XX08A9 STY $71
+.08ab	86 72		stx $72		       STX $72
+.08ad	60		rts		       RTS
+>08ae	aa				       .BYTE $AA
+>08af	aa				       .BYTE $AA
+
+;******  End of listing
